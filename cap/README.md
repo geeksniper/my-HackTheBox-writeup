@@ -20,11 +20,16 @@
 ![task 5](https://github.com/geeksniper/hack-the-box-writeup/blob/4930556dce96ba078624173073f2ee5e6480b783/cap/cap-images/05.path0.png)
 
 6. Fortunately, it worked. If it hadn’t worked, I would have started doing fuzzing rather than testing one by one. Next, I downloaded the pcap file and opened in wireshark.
+
 ` wireshark 0.pcap`
 
 ![task 6](https://github.com/geeksniper/hack-the-box-writeup/blob/4930556dce96ba078624173073f2ee5e6480b783/cap/cap-images/06.open-with-wireshark.png)
 
+7. I got the ftp user and password.
 
+![task 7](https://github.com/geeksniper/hack-the-box-writeup/blob/57e6a7ac52cbaff1c2bf2bace6a88a29a52ea974/cap/cap-images/07.got-user-pass-ftp-login.png)
+
+8. 
 
 
 
