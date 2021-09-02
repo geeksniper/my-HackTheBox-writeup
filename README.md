@@ -1,7 +1,7 @@
 
 ## Author
 
-- [gsniper](https://app.hackthebox.eu/profile/421843)
+- [geeksniper](https://app.hackthebox.eu/profile/421843)
 
 ## HackTheBox Room(s) solved
 
