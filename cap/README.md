@@ -1,4 +1,7 @@
 
+
+## cap HackTheBox walkthrough
+
 1. at first set the dns host in local machine.
 
 ![task 1](https://github.com/geeksniper/hack-the-box-writeup/blob/76cab619b9e6a85172279da83c03124dfb0505b9/cap/cap-images/01.setdnshost.png)
@@ -29,7 +32,46 @@
 
 ![task 7](https://github.com/geeksniper/hack-the-box-writeup/blob/57e6a7ac52cbaff1c2bf2bace6a88a29a52ea974/cap/cap-images/07.got-user-pass-ftp-login.png)
 
-8. 
+8. lets login ftp.but nothing out there.
+
+`ssh 10.10.10.245`
+
+![task 8](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/08.login-ftp.png)
+
+9. try to login ssh with same credential.yeah loged in.
+
+![task 9](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/09.ssh-login.png)
+
+10. got the user flag.
+
+` cat user.txt`
+
+![task 10](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/10.user.png)
+
+11. Next, I searched for the sudo permissions, SUID binaries and capabilities that could escalate the privileges by giving us the root shell. Fortunately, I have cap_setuid available or the python3.8 binary on the target. 
+
+![task 11](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/11.noththing-get-for-privesc.png)
+
+12. Then, a quick search on gtfobins led me to the root shell.
+
+https://gtfobins.github.io/gtfobins/python/#capabilities
+
+`python3 -c 'import os; os.setuid(0); os.system("/bin/bash")'`
+
+![task 12](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/12.gtfobins-privesc.png)
+
+13. after using this binary got root access.
+
+![task 13](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/13.got-root-access.png)
+
+14. after getting root access go to `/root` directory and got the root flag.
+
+`cat root.txt'
+
+![task 14](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/14.root-flag.png)
+
+
+## finished
 
 
 
