@@ -64,7 +64,7 @@ https://gtfobins.github.io/gtfobins/python/#capabilities
 
 ![task 13](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/13.got-root-access.png)
 
-14. after getting root access go to `/root` directory and got the root flag.
+14. after getting root access go to `/root` directory and get the root flag.
 
 `cat root.txt'
 
