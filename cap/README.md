@@ -34,7 +34,7 @@
 
 8. lets login ftp.but nothing out there.
 
-`ssh 10.10.10.245`
+`ftp 10.10.10.245`
 
 ![task 8](https://github.com/geeksniper/hack-the-box-writeup/blob/8c893f7e71aae367836360d51008beb34788f392/cap/cap-images/08.login-ftp.png)
 
