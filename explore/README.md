@@ -124,7 +124,9 @@ Service Info: Device: phone
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done at Fri Sep  3 21:10:42 2021 -- 1 IP address (1 host up) scanned in 2289.50 seconds
 ````
-
+according to the information presented by the scan, this is a phone.
+researching about the identified services i found some interesting info.
+`JSONAPI is a plugin for Bukkit that allows you to access data and other information about your server and your players through a simple, yet secure, HTTP API. This allows you to make awesome websites, iPhone apps, and a way for your players to purchase goods online and automatically receive them in game.`
 
 
 
