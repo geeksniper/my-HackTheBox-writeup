@@ -3,7 +3,9 @@
  This box is a mobile system, a phone and it was my first mobile box on HTB. It's not a complex box, but it's interesting.
 
 01. first of all do nmap scan in this box.
-`# Nmap 7.91 scan initiated Fri Sep  3 20:32:32 2021 as: nmap -T4 -sCV -p- -oN explore 10.10.10.247
+
+ ````bash
+Nmap 7.91 scan initiated Fri Sep  3 20:32:32 2021 as: nmap -T4 -sCV -p- -oN explore 10.10.10.247
 Warning: 10.10.10.247 giving up on port because retransmission cap hit (6).
 Nmap scan report for 10.10.10.247
 Host is up (0.71s latency).
@@ -117,9 +119,8 @@ SF:\x03\x03U\x1c\?\?random1random2random3random4\0\0\x0c\0/\0");
 Service Info: Device: phone
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Sep  3 21:10:42 2021 -- 1 IP address (1 host up) scanned in 2289.50 seconds`
-
-
+Nmap done at Fri Sep  3 21:10:42 2021 -- 1 IP address (1 host up) scanned in 2289.50 seconds
+````
 
 
 
