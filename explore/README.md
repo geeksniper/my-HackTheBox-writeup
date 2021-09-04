@@ -131,6 +131,7 @@ JSONAPI is a plugin for Bukkit that allows you to access data and other informat
 `
 02. Port 42135 is running a ES File Explorer this creates an HTTP service bound to port 59777 and doing a search you can find a public exploit (CVE-2019-6447).
 
+
 ![task 2](https://github.com/geeksniper/my-HackTheBox-writeup/blob/63a7303774413edb0262d1b8d9171b4e54e30c41/explore/explore-img/02.%20publicexploit-of-es-file-explorer.png)
 
 
