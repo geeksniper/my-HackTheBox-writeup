@@ -3,9 +3,9 @@
  This box is a mobile system, a phone and it was my first mobile box on HTB. It's not a complex box, but it's interesting.
 
 01. first of all do nmap scan in this box.
-
 `nmap -T4 -sCV -p- -oN explore 10.10.10.247`
 
+the result will be this.
  ````bash
 Nmap 7.91 scan initiated Fri Sep  3 20:32:32 2021 as: nmap -T4 -sCV -p- -oN explore 10.10.10.247
 Warning: 10.10.10.247 giving up on port because retransmission cap hit (6).
