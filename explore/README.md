@@ -2,7 +2,7 @@
 
  This box is a mobile system, a phone and it was my first mobile box on HTB. It's not a complex box, but it's interesting.
 
-01. first of all do nmap scan in this box.
+1. first of all do nmap scan in this box.
 
 `nmap -T4 -sCV -p- -oN explore 10.10.10.247`
 
