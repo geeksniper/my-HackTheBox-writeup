@@ -133,6 +133,52 @@ researching about the identified services i found some interesting info.
 
 ![task 2](https://github.com/geeksniper/my-HackTheBox-writeup/blob/63a7303774413edb0262d1b8d9171b4e54e30c41/explore/explore-img/02.%20publicexploit-of-es-file-explorer.png)
 
+03. Through this exploit I could read some files.
 
+![task 3](https://github.com/geeksniper/my-HackTheBox-writeup/blob/4429ca790ee0c531c55c1f03459b70c67e8f26a6/explore/explore-img/03.%20using-exploit-list-files.png)
 
+04. after that list pics and i got interesting .jpg file.
 
+![task 4](https://github.com/geeksniper/my-HackTheBox-writeup/blob/4429ca790ee0c531c55c1f03459b70c67e8f26a6/explore/explore-img/04.%20list-pics.png)
+
+05. now i download the file
+
+````bash
+python3 explorer-exploit.py listPics 10.10.10.247
+
+python3 explorer-exploit.py getFile 10.10.10.247 /storage/emulated/0/DCIM/creds.jpg
+````
+![task 5](https://github.com/geeksniper/my-HackTheBox-writeup/blob/4429ca790ee0c531c55c1f03459b70c67e8f26a6/explore/explore-img/05.%20downlaod-jpg.png)
+
+06. I open the .jpg file and This .jpg has notes looking like credentials.
+
+![task 6](https://github.com/geeksniper/my-HackTheBox-writeup/blob/4429ca790ee0c531c55c1f03459b70c67e8f26a6/explore/explore-img/06.%20open-this-file-get-credential-of-ssh.png)
+
+07. As enumerated before, the SSH service is running on port 2222 and using this credentials we were able to login successfully.
+
+````bash
+ssh kristi@10.10.10.247 -p 2222
+````
+![task 7](https://github.com/geeksniper/my-HackTheBox-writeup/blob/4429ca790ee0c531c55c1f03459b70c67e8f26a6/explore/explore-img/07.%20login-ssh-and-get-into-it.png)
+
+08. Now I'm able to inside this machine and able to find the user flag at /sdcard.
+
+![task 8](https://github.com/geeksniper/my-HackTheBox-writeup/blob/7fba83952b2898d596c7434f51be15892d389d8a/explore/explore-img/08.%20got-user-flag.png)
+
+09. Looking for a way to own the Android system I found some things about Android Debug Bridge (adb) - a development tool that allows communication between an Android device and a computer as a shell.
+As some documentations the adb opens a localport (as "system") 5555 and its possible to connect on it through USB setting the configured port, but is possible to bypass this "restriction" doing a portfoward to our machine, in this case, using SSH to do that.
+
+```bash
+ssh kristi@10.10.10.247 -L 5555:localhost:5555 -p 2222
+````
+![task 9](https://github.com/geeksniper/my-HackTheBox-writeup/blob/7fba83952b2898d596c7434f51be15892d389d8a/explore/explore-img/09.%20connect-with-local-port.png)
+
+10. After insert password to stabilish connection the SSH shell starts, but in another terminal its possible to see the localhost port 5555 fowarded to our machine. With that, its possible to interage on this port and we will use adb to do that.adb is running with privileges so we can elevate our privilege to root.
+
+![task 10](https://github.com/geeksniper/my-HackTheBox-writeup/blob/7fba83952b2898d596c7434f51be15892d389d8a/explore/explore-img/10.%20connect-with-adb-and-got-root-access.png)
+
+11. And now as root I could found the root flag using find command to search it.
+
+![task 11](https://github.com/geeksniper/my-HackTheBox-writeup/blob/0a9f5f5aa62688642d5c7b14b13e2762b94cd403/explore/explore-img/11.%20Got-root-flag.png)
+
+##finished
