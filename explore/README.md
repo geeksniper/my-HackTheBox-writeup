@@ -181,4 +181,4 @@ ssh kristi@10.10.10.247 -L 5555:localhost:5555 -p 2222
 
 ![task 11](https://github.com/geeksniper/my-HackTheBox-writeup/blob/0a9f5f5aa62688642d5c7b14b13e2762b94cd403/explore/explore-img/11.%20Got-root-flag.png)
 
-##finished
+## finished
